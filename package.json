@@ -6,6 +6,12 @@
   "author": "胡青杨 <i@do.codes>",
   "license": "MIT",
   "scripts": {
-    "compile": "node ./compile.js"
+    "compile": "node ./compile.js",
+    "dev": "webpack-dev-server --port 2333"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "webpack-dev-server": "^2.11.1"
   }
 }
