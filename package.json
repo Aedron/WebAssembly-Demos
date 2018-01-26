@@ -1,17 +1,22 @@
 {
-  "name": "WebAssembly-Demos",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/HuQingyang/WebAssembly-Demos",
-  "author": "胡青杨 <i@do.codes>",
+  "name": "wasm-demos",
+  "version": "0.0.1",
+  "keywords": [
+    "rust",
+    "wasm",
+    "webassembly",
+    "webpack"
+  ],
   "license": "MIT",
-  "scripts": {
-    "compile": "node ./compile.js",
-    "dev": "webpack-dev-server --port 2333"
-  },
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "webpack-dev-server": "^2.11.1"
+    "rust-native-wasm-loader": "0.2.2",
+    "webpack": "v4.0.0-alpha.4",
+    "webpack-cli": "2.0.2",
+    "webpack-dev-server": "3.0.0-alpha6"
+  },
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server",
+    "setup": "rustup default nightly && rustup update nightly && rustup target add wasm32-unknown-unknown --toolchain nightly && cargo install --force --git https://github.com/alexcrichton/wasm-gc"
   }
 }
